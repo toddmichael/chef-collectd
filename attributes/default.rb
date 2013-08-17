@@ -58,3 +58,6 @@ end
 
 default['collectd']['types_db'] = "/usr/share/collectd/types.db"
 default['collectd']['src_dir'] = "/opt/src-collectd"
+# set this to filename of custom typesDB file if you need
+# if so, you'll also need to add a file/template resource
+default['collectd']['types_db_custom'] = ""

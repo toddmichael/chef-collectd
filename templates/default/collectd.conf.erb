@@ -11,6 +11,9 @@ FQDNLookup "<%= @node['fqdn_lookup'] %>"
 Interval <%= @node['collectd']['interval'] %>
 ReadThreads <%= @node['collectd']['read_threads'] %>
 TypesDB "<%= @node['collectd']['types_db'] %>"
+<% if @node['collectd']['types_db_custom'].length > 0 -%>
+TypesDB "<%= @node['collectd']['types_db_custom'] %>"
+<% end -%>
 BaseDir "<%= @node['collectd']['prefix_dir'] %>"
 PluginDir "<%= @node['collectd']['plugin_dir'] %>"
 
