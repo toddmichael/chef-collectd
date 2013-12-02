@@ -38,6 +38,7 @@ if node['collectd']['version'] =~ /5\.\d+/
     options({
       :host => server,
       :port => 2003,
+      :protocol => "tcp",
       :prefix => node['collectd']['graphite_prefix'],
       :escape_character => "_",
       :store_rates => false
